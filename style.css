@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.heading h4 .active {
+    color: blue;
+}
+header {
+    background-color: whitesmoke;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-top: 3px solid blue;
+    border-bottom: 1px solid rgb(216, 216, 216);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.heading a {
+    color: gray;
+    text-decoration: none;
+}
+
+
+.image {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+
+p:not(.email) {
+    width: 550px;
+}
+
+.email a {
+    text-decoration: none;
+    color: blue;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    width: 80%;
+    margin: 50px auto;
+    gap: 10px;
+    padding: 20px;
+}
+
+.one-third {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.one-third h2 + h3 {
+    margin-top: -5px
+}
+
+.one-third h3 + p {
+    margin-top: -5px;
+}
+
+.two-thirds {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: relative;
+}
+
+
+ul:not(.interest-list) {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    flex: 0 0 50%;
+    margin-bottom: 5px;
+}
+
+
+.chart {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bar {
+    flex: 1 0 100%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.bar-inner {
+    background-color: #4caf50;
+    height: 20px;
+}
+
+.two-thirds, .inline-item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+.two-thirds, .inline-item:last-child {
+    margin-right: 0;
+}
+
+.two-thirds footer {
+    display: flex;
+    justify-content: left;
+    margin-top: 50px;
+}
+footer {
+    background-color: white;
+    text-align: center;
+    padding: 10px o;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;    
+    }
+    
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .one-third {
+        order: 1;
+    }
+
+    .two-thirds {
+        order: 2;
+        h1 {
+            text-align: center;
+        }           
+    }
+}
